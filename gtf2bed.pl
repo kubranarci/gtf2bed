@@ -46,8 +46,7 @@ foreach my $var (@array1)
 		$awk[9]=~s/"//;
 
 
-		#$my $geneid= $1;
-				print "$awk[9]\n";
+	
 
 		if ($awk[2] eq "gene"){
 		    print OUTPUT  "$awk[0]	$awk[3]	$awk[4]	$awk[9]	$awk[6]\n";

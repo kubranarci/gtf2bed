@@ -10,8 +10,6 @@ if ($num_args != 2) {
 my $input_file=$ARGV[0];
 my $output_file=$ARGV[1];
 
-
-
 open(OUTPUT,">",$output_file);
 
 my @chr;
@@ -27,7 +25,7 @@ my @info;
 my @array1;
 open (my $inFile, '<', $input_file) or die $!;
 while (<$inFile>) {
-
+  next if /^#/;
   push(@array1,split /\n/);
 }
 close ($inFile);
